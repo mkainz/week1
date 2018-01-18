@@ -3,11 +3,11 @@
 <title>Test HTML Location Functionality</title>
 <script>
 function getLocation() {
-alert('getting location');
-navigator.geolocation.getCurrentPosition(getPosition);
+	alert('getting location');
+	navigator.geolocation.getCurrentPosition(getPosition);
 }
 function getPosition(position) {
-document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude +
+	document.getElementById('showLocation').innerHTML = "Latitude: " + position.coords.latitude +
 "<br>Longitude: " + position.coords.longitude;
 }
 </script>
@@ -15,4 +15,6 @@ document.getElementById('showLocation').innerHTML = "Latitude: " + position.coor
 <body>
 <b>This code will display your current location</b>
 <div id='showLocation'>Location will be displayed here</div>
-<button id='getLocatio
+<button id='getLocation' onclick='getLocation()'>Click Me to Get Your Location</button>
+</body>
+</html>
